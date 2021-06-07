@@ -38,7 +38,7 @@ def get_graph(entered_year):
     line_data = df.groupby('Month')['ArrDelay'].mean().reset_index()
 
     # 
-    fig = go.Figure(data=go.Scatter(x=line_data[Month], y=line_data[ArrDelay], mode='inlines', marker=dict(color = 'green')))
+    fig = go.Figure(data=go.Scatter(x=line_data['Month'], y=line_data['ArrDelay'], mode='inlines', marker=dict(color = 'green')))
     fig.update_layout()
     return fig
 
